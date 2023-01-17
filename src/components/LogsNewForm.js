@@ -71,10 +71,10 @@ export default function LogsNewForm() {
         <label htmlFor="daysSinceLastCrisis">Days since last Crisis:</label>
         <input
           id="daysSinceLastCrisis"
-          value={log.daysSinceLastCrisis}
           type="text"
           placeholder="last crisis"
           onChange={handleTextChange}
+          checked={log.daysSinceLastCrisis}
           required
         />
         <input type="submit" />
