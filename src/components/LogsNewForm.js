@@ -63,18 +63,18 @@ export default function LogsNewForm() {
         <label htmlFor="mistakesWereMadeToday">Mistakes were made Today:</label>
         <input
           id="mistakesWereMadeToday"
-          value={log.mistakesWereMadeToday}
           type="checkbox"
+          checked={log.mistakesWereMadeToday}
           onChange={handleCheckbox}
           required
         />
         <label htmlFor="daysSinceLastCrisis">Days since last Crisis:</label>
         <input
           id="daysSinceLastCrisis"
-          type="text"
+          value={log.daysSinceLastCrisis}
+          type="number"
           placeholder="last crisis"
           onChange={handleTextChange}
-          checked={log.daysSinceLastCrisis}
           required
         />
         <input type="submit" />
