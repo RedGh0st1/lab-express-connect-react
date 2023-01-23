@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
-import { Form } from "react-bootstrap"
+import { Link, useNavigate } from "react-router-dom"
+import { Button, Form } from "react-bootstrap"
 
 const API = process.env.REACT_APP_API_URL
 
@@ -79,6 +79,9 @@ export default function LogsNewForm() {
         />
         <input type="submit" />
       </Form>
+      <Link to={`/Logs`}>
+        <Button>Back</Button>
+      </Link>
     </div>
   )
 }
