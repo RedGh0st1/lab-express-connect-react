@@ -25,8 +25,8 @@ export default function LogsNewForm() {
   function handleSubmit(event) {
     event.preventDefault()
     axios
-      .post(`${API}/Logs`, log)
-      .then(() => navigate(`/Logs`))
+      .post(`${API}/logs`, log)
+      .then(() => navigate(`/logs`))
       .catch((err) => console.log(err))
   }
 
@@ -79,7 +79,7 @@ export default function LogsNewForm() {
         />
         <input type="submit" />
       </Form>
-      <Link to={`/Logs`}>
+      <Link to={`/logs`}>
         <Button>Back</Button>
       </Link>
     </div>

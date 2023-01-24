@@ -11,15 +11,15 @@ export default function LogsDetail() {
 
   useEffect(() => {
     axios
-      .get(`${API}/Logs/${index}`)
+      .get(`${API}/logs/${index}`)
       .then((res) => setNewLog(res.data))
       .catch((err) => navigate("/Not Found"))
   }, [index, navigate])
 
   function handleDelete() {
     axios
-      .delete(`{API}/Logs/${index}`)
-      .then(() => navigate(`/Logs`))
+      .delete(`{API}/logs/${index}`)
+      .then(() => navigate(`/logs`))
       .catch((err) => console.error(err))
   }
 
@@ -47,13 +47,13 @@ export default function LogsDetail() {
           </div>
         </div>
       </Card.Body>
-      <Link to={"/Logs"}>
+      <Link to={"/logs"}>
         <Button>Back</Button>
       </Link>
-      <Link to={`/Logs/${index}/edit`}>
+      <Link to={`/logs/${index}/edit`}>
         <Button>Edit</Button>
       </Link>
-      <Link to={"/Logs"}>
+      <Link to={"/logs"}>
         <Button onClick={handleDelete}>delete</Button>
       </Link>
     </Card>

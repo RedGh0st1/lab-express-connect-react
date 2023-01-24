@@ -90,7 +90,7 @@ export default function LogEditForm() {
         />
         <input type="submit" />
       </Form>
-      <Link to={`/Logs`}>
+      <Link to={`/logs`}>
         <Button>Back</Button>
       </Link>
     </div>

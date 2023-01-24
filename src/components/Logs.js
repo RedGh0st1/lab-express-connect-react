@@ -8,7 +8,7 @@ export default function Logs() {
 
   useEffect(() => {
     axios
-      .get(`${API}/Logs`)
+      .get(`${API}/logs`)
       .then((res) => setNewLogs(res.data))
       .catch((err) => console.error(err))
   }, [])
